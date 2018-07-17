@@ -1,0 +1,435 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>6CAFC0C6-A428-4d30-A9F9-700E829FEA51</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MyApplication</RootNamespace>
+    <AssemblyName>MyApplication</AssemblyName>
+    <Name>Office365 Admin Center</Name>
+    <PackageAsExecutable>True</PackageAsExecutable>
+    <PackageEntryPoint>Main.psf.designer.ps1</PackageEntryPoint>
+    <HideConsoleWindow>True</HideConsoleWindow>
+    <DotNetVersion>v4.0</DotNetVersion>
+    <Bundle>True</Bundle>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <Name>System</Name>
+      <AssemblyName>
+      </AssemblyName>
+      <HintPath>
+      </HintPath>
+    </Reference>
+    <Reference Include="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <Name>System.Drawing</Name>
+      <AssemblyName>
+      </AssemblyName>
+      <HintPath>
+      </HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <Name>System.Windows.Forms</Name>
+      <AssemblyName>
+      </AssemblyName>
+      <HintPath>
+      </HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccessPermissions.psf.designer.ps1" />
+    <Compile Include="AccessPermissions.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CachedCreds.psf.designer.ps1" />
+    <Compile Include="CachedCreds.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info_OK.psf.designer.ps1" />
+    <Compile Include="Info_OK.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main.psf.designer.ps1" />
+    <Compile Include="Main.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="O365 Admin Center.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>O365 Admin Center.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="O365 Admin Center.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Office365 Admin Center.ps1" />
+    <Compile Include="PreRep_SharePoint.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>PreRep_SharePoint.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="PreRep_SharePoint.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreReqTFA_MSONLINE.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>PreReqTFA_MSONLINE.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="PreReqTFA_MSONLINE.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreReq_ArchType.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>PreReq_ArchType.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="PreReq_ArchType.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreReq_Azure.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>PreReq_Azure.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="PreReq_Azure.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreReq_MSOnline.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>PreReq_MSOnline.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="PreReq_MSOnline.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreReq_SkypeForBusiness.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>PreReq_SkypeForBusiness.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="PreReq_SkypeForBusiness.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelecPreReqExecutionPolicy.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelecPreReqExecutionPolicy.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelecPreReqExecutionPolicy.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectAllEmailPrimaryAddresses.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectAllEmailPrimaryAddresses.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectAllEmailPrimaryAddresses.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCachedDisplayNames.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectCachedDisplayNames.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCachedDisplayNames.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCachedDistroGroups.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectCachedDistroGroups.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCachedDistroGroups.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCachedPublicFolders.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectCachedPublicFolders.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCachedPublicFolders.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectCachedUserPrincipalName.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectCachedUserPrincipalName.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectCachedUserPrincipalName.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectComplianceCase.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectComplianceCase.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectComplianceCase.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDataComplianceRule.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectDataComplianceRule.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDataComplianceRule.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDatePicker.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectDatePicker.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDatePicker.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDeletedSPOSites.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectDeletedSPOSites.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDeletedSPOSites.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDisabledTransportRules.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectDisabledTransportRules.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDisabledTransportRules.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDistroGroup.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectDistroGroup.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDistroGroup.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDistroGroupMembers.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectDistroGroupMembers.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDistroGroupMembers.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDLP.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectDLP.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDLP.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectDynamicDistributionGroups.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectDynamicDistributionGroups.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectDynamicDistributionGroups.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectEmailAddresses.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectEmailAddresses.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectEmailAddresses.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectEnabledTransportRules.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectEnabledTransportRules.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectEnabledTransportRules.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectExistingMailboxPermissions.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectExistingMailboxPermissions.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectExistingMailboxPermissions.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectExternalUsersWithForwarding.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectExternalUsersWithForwarding.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectExternalUsersWithForwarding.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLicensedUsers.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectLicensedUsers.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectLicensedUsers.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLicenses.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectLicenses.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectLicenses.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectLocationCode.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectLocationCode.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectLocationCode.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectMailboxes.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectMailboxes.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectMailboxes.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectMailContact.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectMailContact.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectMailContact.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectMailEnabledSecurityGroups.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectMailEnabledSecurityGroups.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectMailEnabledSecurityGroups.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectPFPermissions.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectPFPermissions.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectPFPermissions.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectRetentionPolicy.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectRetentionPolicy.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectRetentionPolicy.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectRoomMailbox.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectRoomMailbox.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectRoomMailbox.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectSharedMailbox.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectSharedMailbox.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectSharedMailbox.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectSharingPolicy.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectSharingPolicy.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectSharingPolicy.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectSPOSites.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectSPOSites.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectSPOSites.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectTransportRules.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectTransportRules.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectTransportRules.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUnifiedGroupAccessType.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUnifiedGroupAccessType.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUnifiedGroupAccessType.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUnifiedGroupMembers.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUnifiedGroupMembers.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUnifiedGroupMembers.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUnifiedGroups.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUnifiedGroups.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUnifiedGroups.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUnlicensedUsers.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUnlicensedUsers.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUnlicensedUsers.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUserCalendarPermissions.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUserCalendarPermissions.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUserCalendarPermissions.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUserFullPermissions.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUserFullPermissions.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUserFullPermissions.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUserLicenses.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUserLicenses.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUserLicenses.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUserRecycleBin.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUserRecycleBin.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUserRecycleBin.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUsersAnyForwarding.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUsersAnyForwarding.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUsersAnyForwarding.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUsersForm.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUsersForm.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUsersForm.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectUsersInternalForwarding.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>SelectUsersInternalForwarding.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="SelectUsersInternalForwarding.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCheck.psf.designer.ps1">
+      <SubType>Code</SubType>
+      <DependentUpon>UpdateCheck.psf.ps1</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCheck.psf.ps1">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Target Name="Build" />
+  <Import Project="$(MSBuildExtensionsPath)\PowerShell Tools for Visual Studio\PowerShellTools.targets" Condition="Exists('$(MSBuildExtensionsPath)\PowerShell Tools for Visual Studio\PowerShellTools.targets')" />
+</Project>
